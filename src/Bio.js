@@ -4,6 +4,7 @@ class Bio extends Component {
   render() {
     return (
       <ul className="bio">
+        <h2>Bio</h2>
         <li>Design + Code</li>
         <li>Born outside of Dayton, Ohio and currently residing in Denver, Colorado.</li>
         <li>Vim is my editor and chief.</li>
