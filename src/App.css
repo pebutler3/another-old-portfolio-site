@@ -1,3 +1,36 @@
+
+nav {
+  position: relative;
+  background: #ffeb3b;
+}
+
+nav a {
+  background: #fff;
+  color: #333;
+  padding: 5px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #eee;
+}
+
+nav li {
+  display: inline-block;
+  margin: 5px;
+}
+
+li.name {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
 li {
   list-style: none;
 }
+
+.bio img {
+  width: 150px;
+  height: 150px;
+}
+

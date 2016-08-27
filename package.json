@@ -4,7 +4,6 @@
   "private": true,
   "devDependencies": {
     "react-scripts": "0.2.2",
-    "reactotron-react-js": "^1.0.0",
     "superagent": "^2.2.0"
   },
   "dependencies": {
