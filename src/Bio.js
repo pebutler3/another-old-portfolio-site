@@ -4,6 +4,7 @@ class Bio extends Component {
   render() {
     return (
       <ul className="bio">
+        <img src={this.props.avatar} alt="" />
         <h2>Bio</h2>
         <li>Design + Code</li>
         <li>Born outside of Dayton, Ohio and currently residing in Denver, Colorado.</li>
