@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "jest-cli": "^15.1.1",
     "react-scripts": "0.2.2",
     "superagent": "^2.2.0"
   },
@@ -13,11 +14,15 @@
     "superagent": "^2.2.0"
   },
   "scripts": {
+    "test": "jest",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
