@@ -1,38 +1,58 @@
-
-nav {
-  position: relative;
-  background: #ffeb3b;
+/* Blue: #00acc1 */
+/*
+  TODO:
+  Remove all px's and make avatar img smaller
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-/*nav a {
-  background: #fff;
-  color: #333;
-  padding: 5px;
-  text-decoration: none;
-}*/
-
-nav a:hover {
-  background: #eee;
+html, body {
+  height: 100%;
 }
 
-nav:after {
-  content: '';
-  display: table;
-  clear: both;
+.app {
+  display: flex;
+  flex-flow: row wrap;
 }
 
-nav ul {
+.panel {
+  background: rgba(192, 192, 192, 0.28);
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1 100%;
+}
+
+.panel h1 {
+  letter-spacing: 3px;
+  font-size: 18px;
+  font-weight: normal;
   margin: 0;
 }
 
+nav {
+  background: #ffeb3b;
+  flex: 0 0 100%;
+}
+
+nav svg:hover {
+  fill: #00acc1;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+
 nav li {
-  display: inline-block;
-  padding: 5px;
-  float: left;
+  /*border: 1px solid red;*/
 }
 
 nav li:last-child {
-  float: right;
+  margin-left: auto;
 }
 
 li.name {
@@ -44,7 +64,50 @@ li {
   list-style: none;
 }
 
-.bio img {
-  width: 150px;
-  height: 150px;
+.myInformation {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: flex-start;
+}
+
+.avatar {
+  height: auto;
+}
+
+.bio {
+  position: relative;
+  vertical-align: top;
+}
+
+.fulhamCrest {
+  position: relative;
+  left: .5rem;
+  width: 1rem;
+  vertical-align: bottom;
+}
+
+.tools {
+  position: relative;
+  vertical-align: top;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  min-height: 10rem;
+  flex: 1 100%;
+}
+
+/*
+  Media Queries
+*/
+
+@media screen and (max-width: 40em) {
+  .myInformation {
+    flex-flow: column wrap;
+  }
+  .avatar {
+    width: 100%;
+    height: auto;
+  }
 }
