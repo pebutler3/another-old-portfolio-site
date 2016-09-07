@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Request from 'superagent';
 // import _ from 'lodash';
 
+// import avatar
+import avatar from './img/avatar.png';
+
 // Styles
 import './App.css';
 
 // Components
-import Nav from './Nav';
-import Bio from './Bio';
-import Tools from './Tools';
+import Nav    from './Nav';
+import Bio    from './Bio';
+import Footer from './Footer';
 
 // https://api.github.com/users/pebutler3/events
 
@@ -24,28 +27,25 @@ class App extends Component {
 
     render(){
       let repos = this.state.repos
-      let avatar = this.state.avatar
       let account = this.state.account
+      let myTeam = this.state.myTeam
+      let crest = this.state.crest
 
       return (
-          <div>
-             <div className="App">
-                 <Nav
-                   account={account}
-                 />
-                 <Bio avatar={avatar} age={3}/>
-                 <ul>
-                   <li><strong>Public Repos:</strong> {repos}</li>
-                 </ul>
-                 <Tools />
-             </div>
-          </div>
+           <div className="app">
+               <div className="panel">
+                 <h1>In development</h1>
+               </div>
+               <Nav account={account} />
+               <Bio avatar={avatar} daughtersAge={3} myTeam={myTeam} crest={crest} repos={repos} />
+               <Footer />
+           </div>
       );
     }
 
   search(query = "pebutler3") {
     let url = `https://api.github.com/users/${query}`;
-    let events = url + '/events';
+    let fulham = 'http://api.football-data.org/v1/teams/63/';
     Request.get(url).then((response) => {
       this.setState({
         info: response.body.url,
@@ -54,11 +54,11 @@ class App extends Component {
         account: response.body.html_url
       });
     });
-    Request.get(events).then((response) => {
+    Request.get(fulham).set('X-Auth-Token', '8a640408c9654a43976aa1f3e6b2cd0b').set('Accept', 'application/json').then((response) => {
       this.setState({
-        id: response.body.id
+          myTeam: response.body.name,
+          crest: response.body.crestUrl
       });
-      console.log(response.body[0])
     });
   }
 
