@@ -13,9 +13,14 @@ html, body {
   height: 100%;
 }
 
+#root {
+  height: 100%;
+}
+
 .app {
   display: flex;
-  flex-flow: row wrap;
+  height: 100%;
+  flex-direction: column;
 }
 
 .panel {
@@ -34,7 +39,6 @@ html, body {
 
 nav {
   background: #ffeb3b;
-  flex: 0 0 100%;
 }
 
 nav svg:hover {
@@ -43,16 +47,11 @@ nav svg:hover {
 
 nav ul {
   display: flex;
-  margin: 0;
   justify-content: space-between;
 }
 
-nav li {
-  /*border: 1px solid red;*/
-}
-
-nav li:last-child {
-  margin-left: auto;
+nav ul:last-child {
+  margin-right: 10px;
 }
 
 li.name {
@@ -66,12 +65,13 @@ li {
 
 .myInformation {
   display: flex;
-  flex: 0 0 100%;
-  justify-content: flex-start;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar {
-  height: auto;
+  height: 250px;
 }
 
 .bio {
@@ -92,10 +92,21 @@ li {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
-  min-height: 10rem;
-  flex: 1 100%;
+  display: flex;
+  background: #131313;
+  margin-top: auto;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer a {
+  color: #fff;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  padding: 0 10px;
+  text-decoration: none;
 }
 
 /*
@@ -103,11 +114,16 @@ footer {
 */
 
 @media screen and (max-width: 40em) {
+
   .myInformation {
-    flex-flow: column wrap;
+    display: block;
   }
+
   .avatar {
     width: 100%;
     height: auto;
   }
+
+  footer { display: block; }
+
 }
