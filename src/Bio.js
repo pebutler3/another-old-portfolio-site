@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Tools from './Tools';
+import Interests from './Interests';
 
 
 class Bio extends Component {
@@ -21,7 +21,7 @@ class Bio extends Component {
             <img className="fulhamCrest" src={this.props.crest} width="25" alt={this.props.myTeam}/>
           </li>
         </ul>
-        <Tools />
+        <Interests />
       </div>
     );
   }

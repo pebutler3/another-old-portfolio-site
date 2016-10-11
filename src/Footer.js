@@ -5,7 +5,10 @@ class Footer extends Component {
     return (
       <footer>
         <ul>
-          <li className="name">P.E. Butler III</li>
+          <li><a href={this.props.email}>Email</a></li>
+          <li><a href={this.props.twitter}>Twitter</a></li>
+          <li><a href={this.props.linkedin}>Linkedin</a></li>
+          <li><a href={this.props.github}>Github</a></li>
         </ul>
       </footer>
     )

@@ -25,6 +25,7 @@ class App extends Component {
       this.search();
     }
 
+
     render(){
       let repos = this.state.repos
       let account = this.state.account
@@ -33,12 +34,14 @@ class App extends Component {
 
       return (
            <div className="app">
-               <div className="panel">
-                 <h1>In development</h1>
-               </div>
                <Nav account={account} />
                <Bio avatar={avatar} daughtersAge={3} myTeam={myTeam} crest={crest} repos={repos} />
-               <Footer />
+               <Footer
+                 email={'mailto:p.e.butler3@gmail.com'}
+                 twitter={'https://twitter.com/pebutler3'}
+                 linkedin={'https://www.linkedin.com/in/pebutler3'}
+                 github={account}
+               />
            </div>
       );
     }
