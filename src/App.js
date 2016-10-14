@@ -9,9 +9,10 @@ import avatar from './img/avatar.png';
 import './App.css';
 
 // Components
-import Nav    from './Nav';
-import Bio    from './Bio';
-import Footer from './Footer';
+import Nav      from './Nav';
+import Bio      from './Bio';
+import Projects from './Projects';
+import Footer   from './Footer';
 
 // https://api.github.com/users/pebutler3/events
 
@@ -35,7 +36,10 @@ class App extends Component {
       return (
            <div className="app">
                <Nav account={account} />
-               <Bio avatar={avatar} daughtersAge={3} myTeam={myTeam} crest={crest} repos={repos} />
+               <div className="container">
+                 <Bio avatar={avatar} daughtersAge={3} myTeam={myTeam} crest={crest} repos={repos} />
+                 <Projects />
+               </div>
                <Footer
                  email={'mailto:p.e.butler3@gmail.com'}
                  twitter={'https://twitter.com/pebutler3'}

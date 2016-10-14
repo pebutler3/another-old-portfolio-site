@@ -63,11 +63,17 @@ li {
   list-style: none;
 }
 
-.myInformation {
+.container {
   display: flex;
   margin: auto;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  display: flex;
 }
 
 .avatar {
@@ -91,10 +97,19 @@ li {
   vertical-align: top;
 }
 
+.gallery {
+  display: flex;
+}
+
+.gallery img {
+  margin: .25em;
+}
+
 footer {
   display: flex;
   background: #131313;
   margin-top: auto;
+  flex-shrink: 0;
 }
 
 footer ul {
@@ -103,8 +118,6 @@ footer ul {
 
 footer a {
   color: #fff;
-  border-right: 1px solid;
-  border-left: 1px solid;
   padding: 0 10px;
   text-decoration: none;
 }
@@ -116,12 +129,18 @@ footer a {
 @media screen and (max-width: 40em) {
 
   .myInformation {
-    display: block;
+    flex-direction: column;
   }
 
   .avatar {
     width: 100%;
+    max-width: 320px;
     height: auto;
+    margin: auto;
+  }
+
+  .gallery {
+    flex-direction: column;
   }
 
   footer { display: block; }
