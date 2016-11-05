@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "jest-cli": "^15.1.1",
-    "react-scripts": "0.2.2",
+    "react-scripts": "0.7.0",
     "superagent": "^2.2.0"
   },
   "dependencies": {

@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import roadmap from './img/roadmap.png';
-import weather from './img/weather.png';
-import coacep from './img/coacep.png';
-import wikipedia from './img/wikipedia.png';
 
 class Projects extends Component {
   render() {
+    let recentProjects = [
+      ['Roadmap', 'https://github.com/pebutler3/roadmap'],
+      ['Heron', 'https://github.com/getblackboard/heron'],
+      ['Wiki Search', 'http://codepen.io/pebutler3/pen/AXkJzyl'],
+      ['Minimal Theme', 'https://minimal.mybrightsites.com/']
+    ]
     return (
-      <div className="projects">
-        <h2>Projects</h2>
-        <ul className="gallery">
-          <li><a href="https://roadmap-io.herokuapp.com/"><img src={roadmap} alt="" /></a></li>
-          <li><a href="https://codepen.io/pebutler3/pen/AXkJzy"><img src={weather} alt="" /></a></li>
-          <li><a href="http://coacep.org"><img src={coacep} alt="" /></a></li>
-          <li><a href="https://codepen.io/pebutler3/pen/bZkKAq"><img src={wikipedia} alt="" /></a></li>
+      <div className="col-3 projects">
+        <h2>Recent Projects</h2>
+        <ul className="recent-projects">
+          {recentProjects.map(project => <li key={project[1]}><a href={project[1]}>	&#8961; {project[0]}</a></li>)}
         </ul>
       </div>
     );
