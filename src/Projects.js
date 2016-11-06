@@ -5,7 +5,7 @@ class Projects extends Component {
     let recentProjects = [
       ['Roadmap', 'https://github.com/pebutler3/roadmap'],
       ['Heron', 'https://github.com/getblackboard/heron'],
-      ['Wiki Search', 'http://codepen.io/pebutler3/pen/AXkJzyl'],
+      ['Wiki Search', 'http://codepen.io/pebutler3/pen/AXkJzy'],
       ['Minimal Theme', 'https://minimal.mybrightsites.com/']
     ]
     return (
