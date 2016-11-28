@@ -31,7 +31,7 @@ class App extends Component {
            <div className="app">
              <TopBar />
              <Header account={account} />
-             <Bio avatar={avatar} daughtersAge={3} repos={repos} />
+             <Bio avatar={avatar} daughtersAge={4} repos={repos} />
              <Footer
                email={'mailto:p.e.butler3@gmail.com'}
                twitter={'https://twitter.com/pebutler3'}
