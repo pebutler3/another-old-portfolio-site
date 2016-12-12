@@ -16,7 +16,7 @@
   "scripts": {
     "test": "jest",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && surge build/ pebutler3.com",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

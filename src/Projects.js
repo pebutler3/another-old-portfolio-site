@@ -15,7 +15,7 @@ class Projects extends Component {
 
     return (
       <div className="col-3 projects">
-        <h2>Recent Projects</h2>
+        <h2>Recent Projects / Experiments</h2>
         <ul className="recent-projects">
           {recentProjects.map(project => <li key={project[1]}><a href={project[1]}>	{project[0]} - <small>{project[2]}</small></a></li>)}
         </ul>
