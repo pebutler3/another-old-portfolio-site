@@ -10,7 +10,7 @@ class Projects extends Component {
     ]
 
     let inDevelopment = [
-      ['CAP Management', 'http://www.capmanagement.com','Wordpress']
+      ['CAP Management', 'http://www.capmanagement.com','Grav CMS']
     ]
 
     return (
