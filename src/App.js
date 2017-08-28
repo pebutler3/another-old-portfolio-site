@@ -29,9 +29,13 @@ class App extends Component {
 
       return (
            <div className="app">
+             <div className="update">This site will be moving off of React !</div>
              <TopBar />
              <Header account={account} />
-             <Bio avatar={avatar} daughtersAge={4} repos={repos} />
+             <Bio avatar={avatar}
+                  aviAge={4}
+                  amelieAge={'< 1'}
+                  repos={repos} />
              <Footer
                email={'mailto:p.e.butler3@gmail.com'}
                twitter={'https://twitter.com/pebutler3'}

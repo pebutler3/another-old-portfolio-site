@@ -292,3 +292,10 @@ footer a:hover {
 .show {
    display:flex;
 }
+
+.update {
+  background: purple;
+  color: white;
+  padding: .5em;
+  text-align: center;
+}
